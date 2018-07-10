@@ -9,13 +9,35 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [0.1.0] - 2018-07-10
 
-### Commit 01[]
+### Commit 02[]
 
-##### Commit Message : ""
+##### Commit Message : "v0.1.0 README file markdowm fix"
 
 ### Added
 
 1.
+
+### Changed
+
+1.
+
+### Removed
+
+1.
+
+### Fixed
+
+1.  Markdown fix in the README.md file.
+
+## [0.1.0] - 2018-07-10
+
+### Commit 01[8df92f7]
+
+##### Commit Message : "initial commit"
+
+### Added
+
+1.  Project setup and dependencies.
 
 ### Changed
 

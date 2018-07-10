@@ -1,9 +1,10 @@
-#REACT BOILERPLATE
+# REACT BOILERPLATE
+
 The Boilerplate is to create a basic project setup with redux setup.
 
 Following are the packages included in the boiler-plate.
 
-##Features
+## Features
 
 *   axios
 *   polyfills for IE11 support
@@ -26,7 +27,7 @@ Following are the packages included in the boiler-plate.
 *   styled-components
 *   auto delete .map files on production builds
 
-###Browsers:
+### Browsers:
 
 *   IE 11+
 *   Chrome 66.0.3359.139+
