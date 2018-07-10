@@ -50,3 +50,15 @@ Following are the packages included in the boiler-plate.
 ### Deployment
 
 *   `npm run build` builds the app and generates a build folder at root directory.
+
+### Contributing
+
+As I use this for my own projects, I know this might not be the perfect approach for all the projects out there. If you have any ideas, just open an issue and tell me what you think.
+
+If you'd like to contribute, please fork the repository and make changes as you'd like. Pull requests are warmly welcome.
+
+1.  Fork it (<https://cibi_aananth@bitbucket.org/cibi_aananth/smt_pwa.git/fork>)
+2.  Create your feature branch (`git checkout -b feature/fooBar`)
+3.  Commit your changes (`git commit -am 'Add some fooBar'`)
+4.  Push to the branch (`git push origin feature/fooBar`)
+5.  Create a new Pull Request
