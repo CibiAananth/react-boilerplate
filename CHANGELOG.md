@@ -7,11 +7,31 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.1.0] - 2018-09-04
+
+### Commit 04[]
+
+##### Commit Message : "v0.1.1 removed unused plug-ins and code refactoring"
+
+### Added
+
+### Changed
+
+1.
+
+### Removed
+
+1.  Removed pouchdb and proptypes plugins.
+
+### Fixed
+
+1.
+
 ## [0.1.0] - 2018-07-10
 
-### Commit 03[]
+### Commit 03[c6192bd]
 
-##### Commit Message : "v0.1.0 Contributing section in README.md "
+##### Commit Message : "v0.1.0 added Contributing section in README.md "
 
 ### Added
 

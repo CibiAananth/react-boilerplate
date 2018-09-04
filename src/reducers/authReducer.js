@@ -1,7 +1,5 @@
 import { authTypes } from '../constants/actionTypes';
-import { persistentReducer } from 'redux-pouchdb-plus';
-import { fromJS, is, toJS } from 'immutable';
-import PouchDB from 'pouchdb';
+import { fromJS } from 'immutable';
 
 import { enableLoader, disableLoader } from './rootReducer';
 
@@ -12,15 +10,15 @@ let initialState = fromJS({
 	isLoading: false
 });
 
-const reducer = (state = initialState, action) => {
+const authReducer = (state = initialState, action) => {
 	switch (action.type) {
-		case authTypes.LOGIN_SUCCESS:
+		case authTypes.login.LOGIN_SUCCESS:
 			return loginStatus(state, action);
-		case authTypes.LOGIN_FAILED:
+		case authTypes.login.LOGIN_FAILED:
 			return loginStatus(state, action);
-		case authTypes.LOGIN_REQUEST:
+		case authTypes.login.LOGIN_REQUEST:
 			return enableLoader(state, action);
-		case authTypes.USER_LOGOUT:
+		case authTypes.logout.USER_LOGOUT_REQUEST:
 			return logoutUser(state, action);
 		default:
 			return state;
@@ -59,10 +57,4 @@ const logoutUser = (state, action) => {
 		.set('isLoading', false);
 };
 
-const db = new PouchDB('authDB');
-export const authReducer = persistentReducer(reducer, {
-	db,
-	toPouch: toJS,
-	fromPouch: fromJS,
-	isEqual: is
-});
+export default authReducer;

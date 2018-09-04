@@ -1,7 +1,6 @@
 import axios from 'axios';
 
 import { BASE_URL, API_KEY } from '../constants/apiCredentials';
-import { getSignedHeader } from '../utils/signedURLHeader';
 import store from '../store/configureStore';
 
 function dispatchError(error) {
@@ -15,10 +14,6 @@ export const authInstance = axios.create({
 	baseURL: BASE_URL,
 	timeout: 15000,
 	headers: {
-		Authorization: getSignedHeader({
-			method: 'post',
-			url: `${BASE_URL}/login`
-		}),
 		'X-api-key': API_KEY
 	}
 });

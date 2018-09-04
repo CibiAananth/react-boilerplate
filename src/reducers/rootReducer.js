@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux';
 import { reducer as formReducer } from 'redux-form';
 
-import { authReducer } from './authReducer';
+import authReducer from './authReducer';
 
 export function enableLoader(state) {
 	return state.set('isLoading', true);
