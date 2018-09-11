@@ -1,3 +1,3 @@
-import { authTypes } from './authTypes';
+import * as authTypes from "./authTypes";
 
 export { authTypes };

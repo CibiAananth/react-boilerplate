@@ -1,3 +1,3 @@
-import * as authSelector from './authSelector';
+import * as authSelector from "./authSelector";
 
 export { authSelector };

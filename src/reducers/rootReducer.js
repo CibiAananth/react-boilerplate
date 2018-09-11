@@ -1,25 +1,25 @@
-import { combineReducers } from 'redux';
-import { reducer as formReducer } from 'redux-form';
-
-import authReducer from './authReducer';
+import { combineReducers } from "redux";
+import { reducer as formReducer } from "redux-form";
+import { authTypes } from "../constants/actionTypes";
 
 export function enableLoader(state) {
-	return state.set('isLoading', true);
+  return state.set("isLoading", true);
 }
 
 export function disableLoader(state) {
-	return state.set('isLoading', false);
+  return state.set("isLoading", false);
 }
 
 const appReducer = combineReducers({
-	authState: authReducer
+  authState: {},
+  formReducer
 });
 
 const rootReducer = (state, action) => {
-	if (action.type === 'USER_LOGOUT_REQUEST') {
-		state = undefined;
-	}
-	return appReducer(state, action);
+  if (action.type === authTypes.user.logout.request) {
+    state = undefined;
+  }
+  return appReducer(state, action);
 };
 
 export default rootReducer;

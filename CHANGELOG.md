@@ -7,9 +7,29 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.1.0] - 2018-09-11
+
+### Commit 05[]
+
+##### Commit Message : "v0.2.0 redefined boilerplate"
+
+### Added
+
+### Changed
+
+1. Changed actionTypes, sagas, axios, and more
+
+### Removed
+
+1.  Removed all unused plugins .
+
+### Fixed
+
+1.
+
 ## [0.1.0] - 2018-09-04
 
-### Commit 04[]
+### Commit 04[d4fcc45]
 
 ##### Commit Message : "v0.1.1 removed unused plug-ins and code refactoring"
 

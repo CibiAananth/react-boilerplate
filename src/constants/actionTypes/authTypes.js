@@ -1,10 +1,12 @@
-export const authTypes = {
-	login: {
-		LOGIN_REQUEST: 'LOGIN_REQUEST',
-		LOGIN_SUCCESS: 'LOGIN_SUCCESS',
-		LOGIN_FAILURE: 'LOGIN_FAILURE'
-	},
-	logout: {
-		USER_LOGOUT_REQUEST: 'USER_LOGOUT_REQUEST'
-	}
+export const user = {
+  login: {
+    request: "USER_LOGIN_REQUEST",
+    success: "USER_LOGIN_SUCCESS",
+    failure: "USER_LOGIN_FAILURE"
+  },
+  logout: {
+    request: "USER_LOGOUT_REQUEST",
+    success: "USER_LOGOUT_SUCCESS",
+    failure: "USER_LOGOUT_FAILURE"
+  }
 };
