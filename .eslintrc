@@ -7,9 +7,14 @@
     "es6": true,
     "mocha": true
   },
+  "plugins": ["prettier"],
   "rules": {
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
-    "react/destructuring-assignment": [<enabled>, "always", { "ignoreClassFields": true }],
+    "react/jsx-filename-extension": [1, {
+      "extensions": [".js", ".jsx"]
+    }],
+    "react/destructuring-assignment": [ < enabled > , "always", {
+      "ignoreClassFields": true
+    }],
     "valid-jsdoc": [
       "error",
       {
@@ -19,9 +24,11 @@
         "requireReturnDescription": true
       }
     ],
-    no-underscore-dangle: [
-    "error",
-    { "allowAfterThis": true }
+    "no-underscore-dangle": [
+      "error",
+      {
+        "allowAfterThis": true
+      }
     ]
   }
 }
