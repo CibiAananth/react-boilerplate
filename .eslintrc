@@ -8,13 +8,25 @@
     "mocha": true
   },
   "plugins": ["prettier"],
+  "react/forbid-prop-types": ["disabled"],
   "rules": {
-    "react/jsx-filename-extension": [1, {
-      "extensions": [".js", ".jsx"]
-    }],
-    "react/destructuring-assignment": [ < enabled > , "always", {
-      "ignoreClassFields": true
-    }],
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [".js", ".jsx"]
+      }
+    ],
+    "react/destructuring-assignment": [
+      "enabled",
+      "always",
+      {
+        "ignoreClassFields": true
+      }
+    ],
+    "no-use-before-define": [
+      "error",
+      { "functions": false, "classes": false, "variables": false }
+    ],
     "valid-jsdoc": [
       "error",
       {
@@ -27,7 +39,9 @@
     "no-underscore-dangle": [
       "error",
       {
-        "allowAfterThis": true
+        "allowAfterThis": true,
+        "allow": [],
+        "enforceInMethodNames": false
       }
     ]
   }
