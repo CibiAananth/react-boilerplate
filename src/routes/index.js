@@ -1,4 +1,6 @@
-import AppRoutes from "./appRoutes";
-import history from "./history";
+import PrivateRoute from './protectedRoute';
+import SwitchRoutes from './SwitchRoutes';
 
-export { AppRoutes, history };
+export { SwitchRoutes };
+
+export default PrivateRoute;

@@ -1,0 +1,10 @@
+{
+  "sideMenu": {
+    "Dashboard": "Instrumententafel",
+    "Starred": "Markiert",
+    "Drafts": "Entwürfe",
+    "Archived": "Archiviert",
+    "Deleted": "Gelöscht",
+    "Send email": "E-Mail senden"
+  }
+}

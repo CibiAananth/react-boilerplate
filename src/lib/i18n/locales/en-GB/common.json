@@ -1,0 +1,10 @@
+{
+  "sideMenu": {
+    "Dashboard": "Dashboard",
+    "Starred": "Starred",
+    "Drafts": "Drafts",
+    "Archived": "Archived",
+    "Deleted": "Deleted",
+    "Send email": "Send mail"
+  }
+}

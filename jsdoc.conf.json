@@ -1,0 +1,35 @@
+{
+  "tags": {
+    "allowUnknownTags": true,
+    "dictionaries": ["jsdoc", "closure"]
+  },
+  "source": {
+    "include": ["src", "README.md"],
+    "exclude": ["src/__tests__", "src/__mocks__"],
+    "includePattern": ".js$",
+    "excludePattern": "(node_modules/|docs)"
+  },
+  "plugins": [
+    "plugins/markdown",
+    "node_modules/jsdoc-react-proptypes/lib/plugin"
+  ],
+  "templates": {
+    "cleverLinks": false,
+    "monospaceLinks": true,
+    "default": {
+      "nav": {
+        "subsection": {
+          "typedef": false,
+          "class": false
+        }
+      }
+    }
+  },
+  "opts": {
+    "destination": "./docs/",
+    "encoding": "utf8",
+    "private": true,
+    "recurse": true,
+    "template": "./node_modules/toast-jsdoc"
+  }
+}

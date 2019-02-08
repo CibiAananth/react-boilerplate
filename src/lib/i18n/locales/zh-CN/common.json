@@ -1,0 +1,10 @@
+{
+  "sideMenu": {
+    "Dashboard": "仪表板",
+    "Starred": "主演",
+    "Drafts": "草稿",
+    "Archived": "存档",
+    "Deleted": "删除",
+    "Send email": "发送电子邮件"
+  }
+}

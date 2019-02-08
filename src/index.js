@@ -1,15 +1,21 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import { Provider } from "react-redux";
+import React from 'react';
+import ReactDOM from 'react-dom';
+// redux utils
+import { Provider } from 'react-redux';
+import store from 'redux-utils/store';
+// i18n utils
+import 'lib/i18n';
+// styles
+import './index.scss';
+// db
+import 'db';
+// main
+import App from './App';
 
-import "semantic-ui-css/semantic.min.css";
-
-import store from "./store/store";
-import { AppRoutes } from "./routes";
-
-ReactDOM.render(
+const rootElement = (
   <Provider store={store}>
-    <AppRoutes />
-  </Provider>,
-  document.getElementById("root")
+    <App />
+  </Provider>
 );
+
+ReactDOM.render(rootElement, document.getElementById('root'));

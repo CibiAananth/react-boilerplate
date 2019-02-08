@@ -1,58 +1,37 @@
-# REACT BOILERPLATE
+# React boilerplate
 
-The Boilerplate is to create a basic project setup with redux setup.
+## Available Scripts
 
-Following are the packages included in the boiler-plate.
+In the project directory, you can run:
 
-## Features
+### `npm start`
 
--   axios
--   immutable.js
--   SASS support
--   react-router v4
--   redux
--   redux-devtools-extension
--   redux-form
--   redux-logger
--   redux-saga
--   reselect
--   semantic-ui-react
--   source-map-explorer
--   styled-components
--   auto delete .map files on production builds
+Runs the app in the development mode.<br>
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-### Browsers:
+The page will reload if you make edits.<br>
+You will also see any lint errors in the console.
 
--   IE 11+
--   Chrome 66.0.3359.139+
--   FireFox 59.0.3+
+### `npm test`
 
-## Development
+Launches the test runner in the interactive watch mode.<br>
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### Dependencies
+### `npm run build`
 
--   Node version 6.14.1
--   npm version 5.8.0
+Builds the app for production to the `build` folder.<br>
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-### Installation
+The build is minified and the filenames include the hashes.<br>
 
--   `git clone https://github.com/CibiAananth/react-boilerplate.git`
--   `cd {folder_name}`
--   `npm install`
--   `npm start` starts the local development server at http://localhost:3000
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### Deployment
+### `npm run eject`
 
--   `npm run build` builds the app and generates a build folder at root directory.
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-### Contributing
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-As I use this for my own projects, I know this might not be the perfect approach for all the projects out there. If you have any ideas, just open an issue and tell me what you think.
+Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-If you'd like to contribute, please fork the repository and make changes as you'd like. Pull requests are warmly welcome.
-
-1.  Fork it (<https://cibi_aananth@bitbucket.org/cibi_aananth/smt_pwa.git/fork>)
-2.  Create your feature branch (`git checkout -b feature/fooBar`)
-3.  Commit your changes (`git commit -am 'Add some fooBar'`)
-4.  Push to the branch (`git push origin feature/fooBar`)
-5.  Create a new Pull Request
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.

@@ -7,17 +7,30 @@
     "es6": true,
     "mocha": true
   },
-  "plugins": ["prettier"],
-  "react/forbid-prop-types": ["disabled"],
+  "plugins": ["prettier", "react-hooks"],
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "moduleDirectory": ["node_modules", "src/"]
+      }
+    }
+  },
   "rules": {
+    "no-console": 0,
+    "max-len": 0,
+    "prefer-stateless-function": 0,
+    "react/no-array-index-key": 0,
+    "no-nested-ternary": 0,
     "react/jsx-filename-extension": [
       1,
       {
         "extensions": [".js", ".jsx"]
       }
     ],
+    "react-hooks/rules-of-hooks": "error",
+    "react/forbid-prop-types": ["<disabled>"],
     "react/destructuring-assignment": [
-      "enabled",
+      "<enabled>",
       "always",
       {
         "ignoreClassFields": true
@@ -25,7 +38,11 @@
     ],
     "no-use-before-define": [
       "error",
-      { "functions": false, "classes": false, "variables": false }
+      {
+        "functions": false,
+        "classes": false,
+        "variables": false
+      }
     ],
     "valid-jsdoc": [
       "error",
@@ -36,13 +53,6 @@
         "requireReturnDescription": true
       }
     ],
-    "no-underscore-dangle": [
-      "error",
-      {
-        "allowAfterThis": true,
-        "allow": [],
-        "enforceInMethodNames": false
-      }
-    ]
+    "no-underscore-dangle": ["error"]
   }
 }
