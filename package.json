@@ -16,7 +16,7 @@
     "i18next-xhr-backend": "^1.5.1",
     "jsdom": "^13.0.0",
     "lodash": "^4.17.11",
-    "prop-types": "^15.6.2",
+    "prop-types": "^15.7.2",
     "react": "^16.8.0",
     "react-dom": "^16.8.0",
     "react-helmet": "^5.2.0",
@@ -37,7 +37,9 @@
     "test": "react-scripts test",
     "analyze": "source-map-explorer build/static/js/main.*",
     "eject": "react-scripts eject",
-    "doc": "jsdoc -c jsdoc.conf.json -r  --verbose"
+    "doc": "jsdoc -c jsdoc.conf.json -r  --verbose",
+    "lint": "eslint src/",
+    "commit": "git-cz"
   },
   "browserslist": [
     ">0.2%",
@@ -46,14 +48,32 @@
     "not op_mini all"
   ],
   "devDependencies": {
+    "@commitlint/config-conventional": "^7.5.0",
+    "commitizen": "^3.0.5",
+    "commitlint": "^7.5.2",
+    "cz-conventional-changelog": "^2.1.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-prettier": "^3.0.0",
     "eslint-plugin-react-hooks": "^1.0.1",
+    "husky": "^1.3.1",
     "jsdoc": "^3.5.5",
     "jsdoc-react-proptypes": "^1.0.3",
+    "node-sass": "^4.11.0",
     "prettier": "^1.15.3",
     "redux-devtools-extension": "^2.13.7",
     "redux-mock-store": "^1.5.3",
     "toast-jsdoc": "^1.0.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint",
+      "pre-push": "npm run lint",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }

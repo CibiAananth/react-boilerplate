@@ -9,7 +9,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { appActions } from 'redux-utils/actions';
 import { appSelector } from 'redux-utils/selectors';
 // core components
-import NoInternetSnackBar from 'views/components/NoInternetSnackBar';
+import NoInternetSnackBar from 'components/SnackBar/NoInternetSnackBar';
 import './App.scss';
 
 /**

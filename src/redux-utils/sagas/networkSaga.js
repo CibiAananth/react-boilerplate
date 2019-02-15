@@ -15,7 +15,7 @@ function delay(duration) {
 
 function pinger(uriPath) {
   return axios
-    .get(process.env.REACT_APP_SHELF_DOMAIN + uriPath)
+    .get(process.env.REACT_APP_DOMAIN + uriPath)
     .then(response => ({ response }))
     .catch(error => ({ error }));
 }
@@ -25,7 +25,7 @@ function* pingServer() {
     try {
       const { response, error } = yield call(
         pinger,
-        process.env.REACT_APP_SHELF_PING,
+        process.env.REACT_APP_PING,
       );
       if (response) {
         yield put({

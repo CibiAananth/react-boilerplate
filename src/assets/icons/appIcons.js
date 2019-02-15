@@ -14,7 +14,6 @@ import ExpandLessIcon from '@material-ui/icons/ArrowDropUp';
 import ExpandMoreIcon from '@material-ui/icons/ArrowDropDown';
 import ArchiveIcon from '@material-ui/icons/ArchiveOutlined';
 import DeleteIcon from '@material-ui/icons/DeleteOutlined';
-import Marker from './marker';
 
 export {
   ArchiveIcon,
@@ -29,7 +28,6 @@ export {
   LanguageIcon,
   ListIcon,
   MailIcon,
-  Marker,
   MenuIcon,
   MoreVertIcon,
   PersonIcon,

@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-// react utility belt for stateless components and HOC
-import { compose } from 'recompose';
 // redux library for react
 import { connect } from 'react-redux';
 // react library to dynamically set the document’s head section
 import Helmet from 'react-helmet';
 // router
-import { withRouter, Redirect } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 // redux utils
 import { authTypes } from 'redux-utils/types';
 import { appSelector } from 'redux-utils/selectors';
@@ -137,10 +135,7 @@ const mapDispatchToProps = dispatch => ({
   dispatchLoginRequest: payload => dispatch(authActions.userLoginRequest(payload)),
 });
 
-export default compose(
-  withRouter,
-  connect(
-    mapStateToProps,
-    mapDispatchToProps,
-  ),
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps,
 )(LoginContainer);

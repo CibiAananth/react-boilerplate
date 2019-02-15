@@ -19,9 +19,12 @@ const limited = (reducer, predicate) => (state, action) => {
 };
 
 const mainReducer = combineReducers({
-  appStore: limited('REDUCER_HERE', action => (action.meta === undefined
-    ? true
-    : _.includes(action.meta.reducerID, reducerModel.app.id))),
+  appStore: limited(
+    () => 'REDUCER_HERE',
+    action => (action.meta === undefined
+      ? true
+      : _.includes(action.meta.reducerID, reducerModel.app.id)),
+  ),
   authStore: authReducer,
   network: networkReducer,
 });
