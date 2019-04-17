@@ -3,8 +3,9 @@ const colors = {
     default: '#1e1e2b',
     paper: '#424242',
     baseFontColor: '#cfd0d5',
+    light24: 'hsla(0,0%,100%,.8)',
     light25: 'hsla(0,0%,100%,.6)',
-    light26: 'hsla(0,0%,100%,.5)',
+    light26: 'hsla(0,0%,100%,.4)',
     buttonDark: '#27293d',
     buttonDarkHoverColor: '#434344',
     cardDark: '#202128',
@@ -22,6 +23,7 @@ const colors = {
     roseColor: '#e91e63',
     grayColor: '#999999',
     pink: '#e14eca',
+    orangePink: '#ff7683',
     homeColor: '#6b5cff',
   },
 };

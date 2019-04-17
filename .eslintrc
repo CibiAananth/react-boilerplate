@@ -1,11 +1,12 @@
 {
-  "extends": "airbnb",
+  "extends": ["react-app", "airbnb"],
   "parser": "babel-eslint",
   "env": {
     "browser": true,
     "node": true,
     "es6": true,
-    "mocha": true
+    "mocha": true,
+    "jest": true
   },
   "plugins": ["prettier", "react-hooks"],
   "settings": {

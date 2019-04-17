@@ -2,13 +2,13 @@
 import { addHours } from 'lib/core/dateUtils';
 import ls from 'lib/core/storageFactory';
 // db helpers
-import { readFromDB } from 'db';
+import { deleteFromDB, readFromDB } from 'db';
 
 const useCache = () => ls.get('enableCache') && true;
 
 const generateCacheTTL = (duration = 6) => addHours(duration);
 
-const checkCacheValidity = (dbKey, callback, enableCaching = false) => {
+const checkCacheValidity = (dbKey, callback, enableCaching = true) => {
   if (!enableCaching) {
     callback(false);
     return 0;
@@ -28,6 +28,15 @@ const checkCacheValidity = (dbKey, callback, enableCaching = false) => {
         return 0;
       }
       callback(cacheUntil > currentTime, res.response);
+      if (cacheUntil < currentTime) {
+        deleteFromDB(dbKey, (err, resp) => {
+          if (err !== null) {
+            console.log('deletedFromDB success', resp);
+          } else {
+            console.log('deletedFromDB error', err);
+          }
+        });
+      }
       return 0;
     }
     callback(false);

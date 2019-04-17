@@ -1,18 +1,22 @@
-/* eslint-disable no-undef */
-import * as actions from '../actions';
-import * as types from '../constants/actionTypes';
+import * as actions from 'redux-utils/actions';
+import * as types from 'redux-utils/types';
 
-describe('actions', () => {
+describe('Auth actions', () => {
   it('should create an action to login an user', () => {
     const loginAction1 = {
       type: types.authTypes.login.request,
     };
     const loginAction2 = {
       type: types.authTypes.login.request,
-      payload: { name: 'developer' },
+      payload: { email: 'developer', password: 'developer' },
     };
     expect(actions.authActions.userLoginRequest()).toEqual(loginAction1);
-    expect(actions.authActions.userLoginRequest({ name: 'developer' })).toEqual(loginAction2);
+    expect(
+      actions.authActions.userLoginRequest({
+        email: 'developer',
+        password: 'developer',
+      }),
+    ).toEqual(loginAction2);
   });
 
   it('should create an action to logout an user', () => {
@@ -24,6 +28,8 @@ describe('actions', () => {
       payload: { name: 'developer' },
     };
     expect(actions.authActions.userLogoutRequest()).toEqual(logoutAction1);
-    expect(actions.authActions.userLogoutRequest({ name: 'developer' })).toEqual(logoutAction2);
+    expect(
+      actions.authActions.userLogoutRequest({ name: 'developer' }),
+    ).toEqual(logoutAction2);
   });
 });

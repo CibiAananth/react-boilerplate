@@ -1,9 +1,13 @@
+/* eslint-disable no-unused-vars */
 import { configureStore } from 'redux-starter-kit';
 // middlewares
 import { createLogger } from 'redux-logger';
 import createSagaMiddleware from 'redux-saga';
 // redux-utils
-import createCacheMiddleware from 'redux-utils/middlewares';
+import {
+  crashReporterMiddleware,
+  createCacheMiddleware,
+} from 'redux-utils/middlewares';
 import { cacheTypes } from 'redux-utils/types';
 import rootReducer from 'redux-utils/reducers';
 // root saga
@@ -16,7 +20,12 @@ const logger = createLogger({
 const sagaMiddleware = createSagaMiddleware();
 const cacheMiddleware = createCacheMiddleware(cacheTypes.cacheable);
 
-const middleware = [logger, cacheMiddleware, sagaMiddleware];
+const middleware = [
+  logger,
+  crashReporterMiddleware,
+  cacheMiddleware,
+  sagaMiddleware,
+];
 
 const store = configureStore({
   reducer: rootReducer,

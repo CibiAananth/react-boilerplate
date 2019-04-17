@@ -8,25 +8,28 @@ import { Switch, Route, Redirect } from 'react-router-dom';
  * @hideconstructor
  * @description Stateless Router component to switch component based on the Route
  */
-const SwitchRoutes = ({ routes }) => (
-  <Switch>
-    {routes.map((prop, key) => {
-      const {
-        redirect, subRoutes, path, to, component: Component,
-      } = prop;
-      if (redirect) return <Redirect from={path} to={to} key={key} />;
-      if (subRoutes !== undefined && subRoutes.length !== 0) return switchSubRoutes(subRoutes, key);
-      return (
-        <Route
-          path={path}
-          render={rp => <Component {...prop} {...rp} />}
-          key={key}
-        />
-      );
-    })}
-    <Route render={() => <div>not found</div>} />
-  </Switch>
-);
+const SwitchRoutes = ({ routes }) => {
+  console.log('routes', routes);
+  return (
+    <Switch>
+      {routes.map((prop, key) => {
+        const {
+          redirect, subRoutes, path, to, component: Component,
+        } = prop;
+        if (redirect) return <Redirect from={path} to={to} key={key} />;
+        if (subRoutes !== undefined && subRoutes.length !== 0) return switchSubRoutes(subRoutes, key);
+        return (
+          <Route
+            path={path}
+            render={rp => <Component {...prop} {...rp} />}
+            key={key}
+          />
+        );
+      })}
+      <Route render={() => <div>not found</div>} />
+    </Switch>
+  );
+};
 
 const switchSubRoutes = routes => routes.map((prop, itemKey) => {
   const { subRoutes, path, component: Component } = prop;

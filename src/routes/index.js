@@ -1,5 +1,5 @@
-import PrivateRoute from './protectedRoute';
-import SwitchRoutes from './SwitchRoutes';
+import PrivateRoute from 'routes/protectedRoute';
+import SwitchRoutes from 'routes/SwitchRoutes';
 
 export { SwitchRoutes };
 

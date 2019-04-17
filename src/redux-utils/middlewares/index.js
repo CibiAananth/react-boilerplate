@@ -1,3 +1,4 @@
-import cacheMiddleware from './cacheMiddleware';
+import createCacheMiddleware from './cacheMiddleware';
+import crashReporterMiddleware from './crashReporterMiddleware';
 
-export default cacheMiddleware;
+export { crashReporterMiddleware, createCacheMiddleware };

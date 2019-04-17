@@ -37,7 +37,14 @@ const dbWriter = ({ payload, store }) => {
 function createCacheMiddleware(cacheable) {
   return store => next => (action) => {
     if (action.type === cacheTypes.store.request) {
-      if (useCache()) {
+      let { cacheRequest } = action.payload;
+      if (!useCache()) {
+        cacheRequest = true;
+      }
+      if (cacheRequest === undefined || cacheRequest === null) {
+        cacheRequest = true;
+      }
+      if (useCache() && cacheRequest) {
         dbWriter({ payload: action.payload, store });
       } else {
         const { targetAction } = action.payload;
@@ -49,6 +56,13 @@ function createCacheMiddleware(cacheable) {
       }
     }
     if (_.includes(cacheable, action.type)) {
+      let { cacheRequest } = action.payload;
+      if (!useCache()) {
+        cacheRequest = true;
+      }
+      if (cacheRequest === undefined || cacheRequest === null) {
+        cacheRequest = true;
+      }
       const { dbKey, requestAction } = action.payload;
       checkCacheValidity(
         dbKey,
@@ -63,7 +77,7 @@ function createCacheMiddleware(cacheable) {
             payload: action.payload,
             meta: action.meta,
           })),
-        useCache(),
+        useCache() && cacheRequest,
       );
     }
     // Nothing to do here - keep calm and carry on
